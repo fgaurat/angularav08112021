@@ -1,0 +1,11 @@
+<form (ngSubmit)="submit()" #todoNgForm='ngForm'>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Todo title...</mat-label>
+    <input matInput [(ngModel)] = "todoForm.title" name="title" required>
+  </mat-form-field>
+  <br>
+
+  <button type="submit" mat-raised-button color="primary" [disabled] = '!todoNgForm.valid'>Ok</button>
+
+</form>
